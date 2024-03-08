@@ -14,7 +14,7 @@ require 'PHPMailer/SMTP.php';
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
-//if( $_SERVER["REQUEST_METHOD"]=="POST"){
+if( $_SERVER["REQUEST_METHOD"]=="POST"){
 try {
     //Server settings
     extract($_POST);
@@ -44,5 +44,5 @@ try {
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error:"."{".$mail->ErrorInfo."}";
 }
-//}
+}
 ?>
